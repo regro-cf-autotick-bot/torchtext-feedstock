@@ -19,7 +19,7 @@ pin_run_as_build:
 python:
 - 3.9.* *_cpython
 pytorch:
-- '1.12'
+- '1.13'
 re2:
 - 2022.06.01
 target_platform:

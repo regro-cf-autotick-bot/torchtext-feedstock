@@ -19,7 +19,7 @@ source:
     - patches/0005-must-use-C-17-to-match-abseil.patch
 
 build:
-  number: 0
+  number: 1
   # no pytorch on windows in conda-forge, see
   # https://github.com/conda-forge/pytorch-cpu-feedstock/issues/32
   skip: true  # [win]

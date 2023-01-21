@@ -75,7 +75,8 @@ test:
   commands:
     - pip check
     # then run test suite
-    - pytest test/ -v
+    - pytest test/torchtext_unittest -v
+    - pytest test/integration_tests -v
 
 about:
   home: https://pytorch.org/text

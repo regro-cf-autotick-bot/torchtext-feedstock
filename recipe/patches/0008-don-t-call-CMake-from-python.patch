@@ -1,0 +1,25 @@
+From f6062d527b7c5e00342e221a1e3a77b8ae1e0400 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Thu, 2 Feb 2023 10:29:19 +1100
+Subject: [PATCH 8/8] don't call CMake from python
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index f49b00fb..d447f1e9 100644
+--- a/setup.py
++++ b/setup.py
+@@ -114,7 +114,7 @@ setup_info = dict(
+     # See here: https://github.com/pytorch/vision/issues/2134"
+     ext_modules=setup_helpers.get_ext_modules(),
+     cmdclass={
+-        "build_ext": setup_helpers.CMakeBuild,
++        # "build_ext": setup_helpers.CMakeBuild,
+         "clean": clean,
+     },
+ )
+-- 
+2.38.1.windows.1
+

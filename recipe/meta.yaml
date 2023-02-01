@@ -19,14 +19,13 @@ source:
     - patches/0005-don-t-try-to-init-submodules.patch
     - patches/0006-must-use-C-17-to-match-abseil.patch
     - patches/0007-fix-path-inconsistency-in-test.patch
-    - patches/0008-try-HOST_PREFIX.patch
+    - patches/0008-don-t-call-CMake-from-python.patch
 
 build:
   number: 2
   # no pytorch on windows in conda-forge, see
   # https://github.com/conda-forge/pytorch-cpu-feedstock/issues/32
   skip: true  # [win]
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
   rpaths:
     - lib/
     - {{ SP_DIR }}/torch/lib

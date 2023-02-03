@@ -1,4 +1,4 @@
-From cc583924ad87bc2b9a0b3b89753885446a2e1eec Mon Sep 17 00:00:00 2001
+From aaa0ce2060193e0dc07e11cd9e5465cf9bb76ddb Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Wed, 18 Jan 2023 22:25:03 +1100
 Subject: [PATCH 4/7] load library from correct place

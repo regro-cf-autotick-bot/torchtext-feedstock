@@ -1,17 +1,25 @@
-From 60d8122796befb3fe5798c09463e18ac16f5d8d1 Mon Sep 17 00:00:00 2001
+From 68bf8b551383fff8cc6bde16f0e1eed744eca249 Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Wed, 18 Jan 2023 16:56:57 +1100
 Subject: [PATCH 2/7] fix some CMake arguments for our infrastructure
 
 ---
- tools/setup_helpers/extension.py | 10 ++++------
- 1 file changed, 4 insertions(+), 6 deletions(-)
+ tools/setup_helpers/extension.py | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
 
 diff --git a/tools/setup_helpers/extension.py b/tools/setup_helpers/extension.py
-index 760b3bb7..98b909b7 100644
+index 760b3bb7..65704c39 100644
 --- a/tools/setup_helpers/extension.py
 +++ b/tools/setup_helpers/extension.py
-@@ -64,12 +64,13 @@ class CMakeBuild(build_ext):
+@@ -2,6 +2,7 @@ import distutils.sysconfig
+ import os
+ import platform
+ import subprocess
++import sys
+ from pathlib import Path
+ 
+ import torch
+@@ -64,12 +65,13 @@ class CMakeBuild(build_ext):
          cfg = "Debug" if self.debug else "Release"
  
          cmake_args = [
@@ -20,15 +28,15 @@ index 760b3bb7..98b909b7 100644
 -            f"-DCMAKE_PREFIX_PATH={torch.utils.cmake_prefix_path}",
 -            f"-DCMAKE_INSTALL_PREFIX={extdir}",
 +            f"-DCMAKE_PREFIX_PATH={os.environ['PREFIX']}",
-+            f"-DCMAKE_INSTALL_PREFIX={os.environ['SP_DIR'] + '/torchtext'}",
++            f"-DCMAKE_INSTALL_PREFIX={os.environ['PREFIX']}/lib/python{'.'.join(sys.version_info[:2])}/site-packages/torchtext",
              "-DCMAKE_VERBOSE_MAKEFILE=ON",
              f"-DPython_INCLUDE_DIR={distutils.sysconfig.get_python_inc()}",
 -            f"-DTORCH_INSTALL_PREFIX:STRING={os.path.dirname(torch.__file__)}",
-+            f"-DTORCH_INSTALL_PREFIX:STRING={os.environ['SP_DIR'] + '/torch'}",
++            f"-DTORCH_INSTALL_PREFIX={os.environ['PREFIX']}/lib/python{'.'.join(sys.version_info[:2])}/site-packages/torch",
              "-DBUILD_TORCHTEXT_PYTHON_EXTENSION:BOOL=ON",
              "-DRE2_BUILD_TESTING:BOOL=OFF",
              "-DBUILD_TESTING:BOOL=OFF",
-@@ -80,9 +81,6 @@ class CMakeBuild(build_ext):
+@@ -80,9 +82,6 @@ class CMakeBuild(build_ext):
          ]
          build_args = ["--target", "install"]
  

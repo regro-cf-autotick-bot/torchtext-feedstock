@@ -1,4 +1,4 @@
-From a2e6933a9ae206f216e4b20d14010912f5ff9758 Mon Sep 17 00:00:00 2001
+From f2657a23108f6c4be5fe159a4d557e573fdacec9 Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Wed, 18 Jan 2023 22:58:13 +1100
 Subject: [PATCH 5/7] don't try to init submodules

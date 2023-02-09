@@ -1,7 +1,7 @@
 From 3b8047c7bf4779401e6cf73620867d31d5768fed Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Fri, 20 Jan 2023 17:16:20 +1100
-Subject: [PATCH 6/7] must use C++17 to match abseil
+Subject: [PATCH 6/8] must use C++17 to match abseil
 
 ---
  CMakeLists.txt | 2 +-

@@ -1,7 +1,7 @@
 From 7baf6468ba146d071027a5a16f9a8b904903da5c Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Wed, 18 Jan 2023 16:56:57 +1100
-Subject: [PATCH 2/7] fix some CMake arguments for our infrastructure
+Subject: [PATCH 2/8] fix some CMake arguments for our infrastructure
 
 ---
  tools/setup_helpers/extension.py | 12 ++++++------

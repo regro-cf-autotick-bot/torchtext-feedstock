@@ -1,7 +1,7 @@
 From 475ed9747faf32556d80b129dc69bc218eb0fe1d Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Wed, 18 Jan 2023 22:06:33 +1100
-Subject: [PATCH 3/7] remove unnecessary installation requirements
+Subject: [PATCH 3/8] remove unnecessary installation requirements
 
 ---
  setup.py | 2 +-

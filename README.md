@@ -1,11 +1,11 @@
-About torchtext
-===============
+About torchtext-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/torchtext-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pytorch.org/text
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/torchtext-feedstock/blob/main/LICENSE.txt)
 
 Summary: Data loaders and abstractions for text and NLP
 

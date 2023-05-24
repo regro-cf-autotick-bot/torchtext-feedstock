@@ -7,7 +7,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '14'
+- '15'
 libsentencepiece:
 - 0.1.97
 macos_machine:
@@ -23,7 +23,7 @@ python:
 pytorch:
 - '1.13'
 re2:
-- 2023.02.02
+- 2023.03.02
 target_platform:
 - osx-64
 zip_keys:

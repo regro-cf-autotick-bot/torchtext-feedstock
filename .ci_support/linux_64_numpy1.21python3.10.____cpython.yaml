@@ -7,7 +7,7 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '11'
+- '12'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 libsentencepiece:
@@ -23,7 +23,7 @@ python:
 pytorch:
 - '1.13'
 re2:
-- 2023.02.02
+- 2023.03.02
 target_platform:
 - linux-64
 zip_keys:

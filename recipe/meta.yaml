@@ -21,7 +21,7 @@ source:
     - patches/0007-fix-path-inconsistency-in-test.patch
 
 build:
-  number: 3
+  number: 4
   # no pytorch on windows in conda-forge, see
   # https://github.com/conda-forge/pytorch-cpu-feedstock/issues/32
   skip: true  # [win]
@@ -75,8 +75,12 @@ test:
     - torchtext.vocab
   commands:
     - pip check
-    # then run test suite
-    - pytest test/torchtext_unittest -v
+    {% set tests_to_skip = "_not_a_real_test" %}
+    # necessary URL not available anymore
+    {% set tests_to_skip = tests_to_skip + " or test_download_charngram_vectors" %}
+
+    # run test suite
+    - pytest test/torchtext_unittest -v -k "not ({{ tests_to_skip }})"
     # don't run "large" integration tests, which might get OOM killed
     - pytest test/integration_tests -v -k "not large"
 

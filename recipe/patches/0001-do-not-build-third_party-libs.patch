@@ -1,7 +1,7 @@
-From 420cbd5a4c2b46e285529eb3c15de8847818f5dc Mon Sep 17 00:00:00 2001
+From 146851060c68bf768cac704c23ccc2fd90462d80 Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Wed, 1 Dec 2021 21:07:42 +1100
-Subject: [PATCH 1/7] do not build third_party libs
+Subject: [PATCH 1/6] do not build third_party libs
 
 ---
  CMakeLists.txt                | 5 ++++-
@@ -9,7 +9,7 @@ Subject: [PATCH 1/7] do not build third_party libs
  2 files changed, 4 insertions(+), 9 deletions(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index ed39e644..46312680 100644
+index b789a3226..d6b019159 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -63,5 +63,8 @@ endif()
@@ -23,7 +23,7 @@ index ed39e644..46312680 100644
 +
  add_subdirectory(torchtext/csrc)
 diff --git a/torchtext/csrc/CMakeLists.txt b/torchtext/csrc/CMakeLists.txt
-index 5d67bba8..699fa822 100644
+index 5d67bba8a..699fa822d 100644
 --- a/torchtext/csrc/CMakeLists.txt
 +++ b/torchtext/csrc/CMakeLists.txt
 @@ -18,10 +18,6 @@ set(
@@ -48,6 +48,3 @@ index 5d67bba8..699fa822 100644
      ${TORCH_INSTALL_PREFIX}/include
      ${TORCH_INSTALL_PREFIX}/include/torch/csrc/api/include
      )
--- 
-2.38.1.windows.1
-

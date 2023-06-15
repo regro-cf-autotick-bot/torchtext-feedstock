@@ -62,6 +62,7 @@ test:
     - pytest
     - expecttest
     - parameterized
+    - portalocker >=2
     - spacy-model-{{ spacy_model }}
     - torchdata
   source_files:

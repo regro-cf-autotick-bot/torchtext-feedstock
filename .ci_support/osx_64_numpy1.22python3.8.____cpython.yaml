@@ -7,23 +7,23 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '15'
+- '16'
 libsentencepiece:
 - 0.1.99
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '1.21'
+- '1.22'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.8.* *_cpython
 pytorch:
 - '2.0'
 re2:
-- 2023.03.02
+- 2023.06.02
 target_platform:
 - osx-64
 zip_keys:

@@ -13,7 +13,7 @@ docker_image:
 libsentencepiece:
 - 0.1.99
 numpy:
-- '1.21'
+- '1.22'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -23,7 +23,7 @@ python:
 pytorch:
 - '2.0'
 re2:
-- 2023.03.02
+- 2023.06.02
 target_platform:
 - linux-64
 zip_keys:

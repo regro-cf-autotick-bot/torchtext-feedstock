@@ -64,7 +64,7 @@ test:
     - parameterized
     - portalocker >=2
     - spacy-model-{{ spacy_model }}
-    - torchdata
+    - torchdata >=0.6
   source_files:
     - test/
   imports:

@@ -1,6 +1,0 @@
-# due to abseil constraint of libsentencepiece 0.1
-re2:
-  - 2023.09.01
-
-libsentencepiece:
-  - 0.1.99

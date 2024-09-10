@@ -42,6 +42,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - numpy
     - pytorch
     # from pytorch/text/tree/main/third_party

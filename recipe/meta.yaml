@@ -20,12 +20,11 @@ source:
     - patches/0006-fix-path-inconsistency-in-test.patch
 
 build:
-  number: 5
+  number: 6
   # no pytorch on windows in conda-forge, see
   # https://github.com/conda-forge/pytorch-cpu-feedstock/issues/32
-  skip: true  # [win]
-  # waiting for spacy
-  skip: true  # [py>=312]
+  # no py312 due to spacy
+  skip: true  # [win or py>=312]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   rpaths:
     - lib/
@@ -42,6 +41,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - numpy
     - pytorch
     # from pytorch/text/tree/main/third_party

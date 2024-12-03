@@ -20,7 +20,7 @@ source:
     - patches/0006-fix-path-inconsistency-in-test.patch
 
 build:
-  number: 6
+  number: 7
   # no pytorch on windows in conda-forge, see
   # https://github.com/conda-forge/pytorch-cpu-feedstock/issues/32
   skip: true  # [win]

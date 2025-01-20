@@ -81,10 +81,8 @@ test:
   commands:
     - pip check
     {% set tests_to_skip = "_not_a_real_test" %}
-    # necessary URL not available anymore
-    {% set tests_to_skip = tests_to_skip + " or test_download_charngram_vectors" %}
-    # extreme download time (>5min)
-    {% set tests_to_skip = tests_to_skip + " or test_download_glove_vectors" %}
+    # tests with URLs that don't exist anymore, plus some extreme download times (>5min)
+    {% set tests_to_skip = tests_to_skip + " or TestVocab" %}
 
     # run test suite
     - pytest test/torchtext_unittest -v -k "not ({{ tests_to_skip }})" --durations=10

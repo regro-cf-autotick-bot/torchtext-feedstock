@@ -1,4 +1,4 @@
-From e908157f4377ffac28564e99ce9622078f4d67ea Mon Sep 17 00:00:00 2001
+From a6759306b9eb87ead2d30ee4e12361c850956153 Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Sat, 21 Jan 2023 12:46:49 +1100
 Subject: [PATCH 6/6] fix path inconsistency in test

@@ -15,7 +15,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '18'
 libsentencepiece:
-- 0.1.99
+- 0.2.0
 libutf8proc:
 - '2.10'
 macos_machine:
@@ -31,7 +31,7 @@ python:
 pytorch:
 - '2.4'
 re2:
-- 2023.09.01
+- 2024.07.02
 target_platform:
 - osx-64
 zip_keys:

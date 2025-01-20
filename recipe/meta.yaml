@@ -79,6 +79,8 @@ test:
     {% set tests_to_skip = "_not_a_real_test" %}
     # necessary URL not available anymore
     {% set tests_to_skip = tests_to_skip + " or test_download_charngram_vectors" %}
+    # extreme download time (>5min)
+    {% set tests_to_skip = tests_to_skip + " or test_download_fasttext_vectors" %}
 
     # run test suite
     - pytest test/torchtext_unittest -v -k "not ({{ tests_to_skip }})"

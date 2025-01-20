@@ -17,7 +17,7 @@ docker_image:
 libsentencepiece:
 - 0.1.99
 libutf8proc:
-- '2.9'
+- '2.10'
 numpy:
 - '2.0'
 pin_run_as_build:

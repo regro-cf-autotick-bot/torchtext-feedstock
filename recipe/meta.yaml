@@ -83,9 +83,9 @@ test:
     {% set tests_to_skip = tests_to_skip + " or test_download_fasttext_vectors" %}
 
     # run test suite
-    - pytest test/torchtext_unittest -v -k "not ({{ tests_to_skip }})"
+    - pytest test/torchtext_unittest -v -k "not ({{ tests_to_skip }})" --durations=50
     # don't run "large" integration tests, which might get OOM killed
-    - pytest test/integration_tests -v -k "not large"
+    - pytest test/integration_tests -v -k "not large" --durations=10
 
 about:
   home: https://pytorch.org/text

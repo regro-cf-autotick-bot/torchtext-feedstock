@@ -27,7 +27,7 @@ pin_run_as_build:
 python:
 - 3.10.* *_cpython
 pytorch:
-- '2.5'
+- '2.6'
 re2:
 - 2024.07.02
 target_platform:

@@ -21,7 +21,7 @@ source:
     - patches/0006-allow-torch.load-to-load-more-than-weights-as-previo.patch
 
 build:
-  number: 4
+  number: 5
   # no pytorch on windows in conda-forge, see
   # https://github.com/conda-forge/pytorch-cpu-feedstock/issues/32
   skip: true  # [win]
